@@ -12,6 +12,6 @@ Feature: Subscribe
     Examples:
       | countryName | currency | lite | classic | premium |
       | KSA         | SAR      | 15   | 25      | 60      |
-#      | BAH         | BHD      | 2    | 3       | 6       |
-#      | KUW         | KWD      | 1.2  | 2.5     | 4.8     |
+      | BAH         | BHD      | 2    | 3       | 6       |
+      | KUW         | KWD      | 1.2  | 2.5     | 4.8     |
 

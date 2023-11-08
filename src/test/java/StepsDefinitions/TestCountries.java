@@ -10,13 +10,14 @@ import org.testng.Assert;
 import java.sql.SQLOutput;
 
 import static Setup.DriverSetup.driver;
+import static Utils.configuration.getURL;
 
 public class TestCountries {
     SubscribePage subscribePage;
 
     @Given("User opens STC website")
     public void userOpensSTCEWebsite() {
-        driver.get("https://subscribe.stctv.com/sa-en");
+        driver.get(getURL());
         subscribePage = new SubscribePage(driver);
     }
 
