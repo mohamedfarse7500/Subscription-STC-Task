@@ -94,4 +94,10 @@ public class SubscribePage {
     public String getPremiumPackageCurrency() {
         return premiumPackageCurrency().getText();
     }
+
+    public String genrateFullPrice(String currency, String price) {
+        return price + " " + currency + "/month";
+    }
+
+
 }

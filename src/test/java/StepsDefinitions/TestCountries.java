@@ -39,42 +39,11 @@ public class TestCountries {
 
         }
     }
-
-    @Then("Validate type , price and Currency for {string}")
-    public void validateTypePriceAndCurrencyForKSA(String countryName) {
-        switch (countryName) {
-            case "KSA":
-                Assert.assertEquals(subscribePage.getLitePackageTitle(), "LITE");
-                Assert.assertTrue(subscribePage.getLitePackageCurrency().contains("15 SAR"));
-
-                Assert.assertEquals(subscribePage.getClassicPackageTitle(), "CLASSIC");
-                Assert.assertTrue(subscribePage.getClassicPackageCurrency().contains("25 SAR"));
-
-                Assert.assertEquals(subscribePage.getPremiumPackageTitle(), "PREMIUM");
-                Assert.assertTrue(subscribePage.getPremiumPackageCurrency().contains("60 SAR"));
-
-                break;
-            case "BAH":
-                Assert.assertEquals(subscribePage.getLitePackageTitle(), "LITE");
-                Assert.assertTrue(subscribePage.getLitePackageCurrency().contains("2 BHD"));
-
-                Assert.assertEquals(subscribePage.getClassicPackageTitle(), "CLASSIC");
-                Assert.assertTrue(subscribePage.getClassicPackageCurrency().contains("3 BHD"));
-
-                Assert.assertEquals(subscribePage.getPremiumPackageTitle(), "PREMIUM");
-                Assert.assertTrue(subscribePage.getPremiumPackageCurrency().contains("6 BHD"));
-                break;
-            case "KUW":
-                Assert.assertEquals(subscribePage.getLitePackageTitle(), "LITE");
-                Assert.assertTrue(subscribePage.getLitePackageCurrency().contains("1.2 KWD"));
-
-                Assert.assertEquals(subscribePage.getClassicPackageTitle(), "CLASSIC");
-                Assert.assertTrue(subscribePage.getClassicPackageCurrency().contains("2.5 KWD"));
-
-                Assert.assertEquals(subscribePage.getPremiumPackageTitle(), "PREMIUM");
-                Assert.assertTrue(subscribePage.getPremiumPackageCurrency().contains("4.8 KWD"));
-
-        }
-
+    @Then("Validate plans {string},{string} and {string}  and Currency {string} for all countries")
+    public void validatePlansAndCurrencyForAllCountries(String litePrice, String classicPrice, String premiumPrice,String currency)
+    {
+        Assert.assertEquals(subscribePage.getLitePackageCurrency(),subscribePage.genrateFullPrice(currency,litePrice));
+        Assert.assertEquals(subscribePage.getClassicPackageCurrency(),subscribePage.genrateFullPrice(currency,classicPrice));
+        Assert.assertEquals(subscribePage.getPremiumPackageCurrency(),subscribePage.genrateFullPrice(currency,premiumPrice));
     }
 }
