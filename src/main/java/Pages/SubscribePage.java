@@ -10,6 +10,7 @@ public class SubscribePage {
 
     WebDriver driver;
 
+
     public SubscribePage(WebDriver driver) {
         this.driver = driver;
     }
