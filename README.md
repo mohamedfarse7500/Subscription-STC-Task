@@ -16,3 +16,5 @@ STC Subscription Task
 [Maven](https://maven.apache.org/download.cgi)
 [GIT](https://git-scm.com/downloads)
 
+##  How To Run
+mvn clean test

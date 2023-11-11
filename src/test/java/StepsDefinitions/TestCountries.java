@@ -27,24 +27,36 @@ public class TestCountries {
     }
 
     @And("User choose {string} from countries list")
-    public void userChooseKSAFromCountryList(String countryName) {
+    public void userChooseCountryFromCountryList(String countryName) {
+
         switch (countryName) {
             case "KSA":
                 subscribePage.clickOnKSA();
                 break;
-            case "BAH":
+            case "Bahrain":
                 subscribePage.clickOnBAH();
                 break;
-            case "KUW":
+            case "Kuwait":
                 subscribePage.clickOnKUW();
 
         }
     }
-    @Then("Validate plans {string},{string} and {string}  and Currency {string} for all countries")
-    public void validatePlansAndCurrencyForAllCountries(String litePrice, String classicPrice, String premiumPrice,String currency)
-    {
-        Assert.assertEquals(subscribePage.getLitePackageCurrency(),subscribePage.genrateFullPrice(currency,litePrice));
-        Assert.assertEquals(subscribePage.getClassicPackageCurrency(),subscribePage.genrateFullPrice(currency,classicPrice));
-        Assert.assertEquals(subscribePage.getPremiumPackageCurrency(),subscribePage.genrateFullPrice(currency,premiumPrice));
+
+
+    @Then("Validate plans prices for {string}")
+    public void validatePlansPricesForCountry(String country) {
+        Assert.assertEquals(subscribePage.getActualPrices(), subscribePage.getExpectedPrices(country));
+    }
+    @Then("Validate plans currency for {string}")
+    public void validatePlansCurrencyForCountry(String country) {
+        Assert.assertEquals(subscribePage.getActualCurrency(), subscribePage.getExpectedCurrency(country));
+
+
+    }
+    @Then("Validate plans type for {string}")
+    public void validatePlansTypeForCountry(String country) {
+        Assert.assertEquals(subscribePage.getActualType(), subscribePage.getExpectedType(country));
+
+
     }
 }

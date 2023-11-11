@@ -1,3 +1,4 @@
 Setup\DriverSetup.class
 Pages\SubscribePage.class
 Utils\configuration.class
+Utils\JsonFileHandler.class
