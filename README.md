@@ -1,7 +1,11 @@
 # STC-Subscription-Task
+
 UI website : https://subscribe.stctv.com/sa-en
+
 This Repo Has 3 Test Cases for STC TV subscription Plans , prices and currency for SA , KW and BH 
+
 The FrameWork used is BDD with Java and Selenium
+
 Testcase could run on different browser like Chrome,Firefox and Edge
 
 
