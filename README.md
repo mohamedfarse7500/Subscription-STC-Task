@@ -30,9 +30,15 @@ Testcase could run on different browser like Chrome,Firefox and Edge
 ##  How To Run
 -Run Frome Commend Line
 navigate to project directory
+
 open cmd in the project directory
+
 write mvn clean test and press enter
 
+
 -Run Fron Intellij IDE
+
 open project in intellij IDE
+
 run runner.java in src\test\java\Runner file
+
