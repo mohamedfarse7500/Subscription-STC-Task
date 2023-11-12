@@ -1,5 +1,9 @@
 # STC-Subscription-Task
-STC Subscription Task
+UI website : https://subscribe.stctv.com/sa-en
+This Repo Has 3 Test Cases for STC TV subscription Plans , prices and currency for SA , KW and BH 
+The FrameWork used is BDD with Java and Selenium
+Testcase could run on different browser like Chrome,Firefox and Edge
+
 
 # Cucumber JAVA Test Automation Framework
 -Cucumber Framework in Selenium is an open-source testing framework that supports Behavior Driven Development for automation testing of web applications. The tests are first written in a simple scenario form that describes the expected behavior of the system from the user’s perspective.
@@ -17,4 +21,10 @@ STC Subscription Task
 [GIT](https://git-scm.com/downloads)
 
 ##  How To Run
-mvn clean test
+-Run Frome Commend Line
+navigate to project directory
+open cmd in the project directory
+write mvn clean test and press enter
+-Run Fron Intellij IDE
+open project in intellij IDE
+run runner.java in src\test\java\Runner file
