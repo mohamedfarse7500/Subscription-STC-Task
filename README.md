@@ -20,8 +20,11 @@ Testcase could run on different browser like Chrome,Firefox and Edge
 
 ##  Installation
 [Java(JDK) 21](https://www.oracle.com/java/technologies/downloads/)
+
 [IntelliJ IDEA](https://www.jetbrains.com/idea/download/?section=windows)
+
 [Maven](https://maven.apache.org/download.cgi)
+
 [GIT](https://git-scm.com/downloads)
 
 ##  How To Run
